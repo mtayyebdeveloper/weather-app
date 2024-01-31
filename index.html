@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>weather.mtd.com</title>
+</head>
+<body>
+    <div class="container py-3">
+        <header>
+          <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center link-body-emphasis text-decoration-none">
+              <span class="fs-4 fw-bold">Weather by M T Developer</span>
+            </a>
+      
+            <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+              <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="index.html">Home</a>
+              <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#">Weather Info</a>
+              <a class="py-2 link-body-emphasis text-decoration-none" href="contact.html">Contact US</a>
+            </nav>
+            <form class="d-flex ms-5">
+                <input id="search_box" class="form-control me-2" placeholder="Search">
+                <button class="btn btn-outline-success" id="search_btn">Search</button>
+              </form>
+          </div>
+      
+          <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+            <h1 class="display-4 fw-normal text-body-emphasis">Weather for <span class="cityname"></span></h1>
+            <p class="fs-5 text-body-secondary">
+                <span class="cityname"></span> is very Papular city.
+                <br>
+                <span class="cityname"></span> weather is very <span id="weathercheck"></span>.
+            </p>
+          </div>
+        </header>
+      
+        <main>
+          <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+            <div class="col">
+              <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                  <h4 class="my-0 fw-normal text-primary">Temperature</h4>
+                </div>
+                <div class="card-body">
+                  <h1 class="card-title pricing-card-title"><span id="city_temp" class="text-primary"></span><small class="text-primary fw-light"><sup>o</sup>C</small></h1>
+                  <ul class="list-unstyled mt-3 mb-4">
+                    <li>Temperature is <span id="temp"></span></li>
+                    <li>Min temperature is <span id="min_temp"></span></li>
+                    <li>Max temperature is <span id="max_temp"></span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                  <h4 class="my-0 fw-normal text-primary">Humidity</h4>
+                </div>
+                <div class="card-body">
+                  <h1 class="card-title pricing-card-title"><span id="humidity1" class="text-primary"></span><small class="text-primary fw-light">%</small></h1>
+                  <ul class="list-unstyled mt-3 mb-4">
+                    <li>Humidity is <span id="humidity"></span></li>
+                    <li>Sunrise is <span id="sunrise"></span></li>
+                    <li>Sunset is <span id="sunset"></span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                  <h4 class="my-0 fw-normal text-primary">Wind</h4>
+                </div>
+                <div class="card-body">
+                  <h1 class="card-title pricing-card-title"><span id="wind" class="text-primary"></span><small class=" fw-light text-primary">Km/h</small></h1>
+                  <ul class="list-unstyled mt-3 mb-4">
+                    <li>Wind degrees is <span id="wind_d"></span></li>
+                    <li>Wind speed is <span id="wind_s"></span></li>
+                    <li>Feels like is <span id="feelsLike"></span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+
+      <!-- bootstrap js link  -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
